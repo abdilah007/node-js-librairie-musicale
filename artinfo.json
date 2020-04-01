@@ -1,0 +1,21 @@
+[
+
+{
+	  
+	"image":"1.jpg",
+	"name":"taylor swift",
+	"description":"is an American singer-songwriter and actress. She is under contract with the independent label Big Machine Records, and is the youngest artist to have signed with the music publishing house Sony / ATV Music Publishing.",
+    "albums":["one.jpg","two.jpg","three.jpg","four.jpg","five","six"],
+    "songs":["1.mp3","2.mp3","3.mp3","4.mp3","5.mp3"]
+ 	
+},
+{
+	"image":"1.jpg",
+	"name":"taylor swift",
+	"description":"is an American singer-songwriter and actress. She is under contract with the independent label Big Machine Records, and is the youngest artist to have signed with the music publishing house Sony / ATV Music Publishing.",
+    "albums":["one.jpg","two.jpg","three.jpg","four.jpg","five","six"],
+    "songs":["1.mp3","2.mp3","3.mp3","4.mp3","5.mp3"]
+ 	
+},
+
+]
