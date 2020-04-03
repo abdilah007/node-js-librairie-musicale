@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webslesson Tutorial | Search HTML Table Data by using JQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+ </head>
+
+ <body>
+     <input type="search" id="search" placeholder="search">   
+     <table class="table table-striped table-bordered table-hover "> 
+         <thead>
+             <tr>
+                 <th>id</th>
+                 <th>Nom</th>
+                 <th>Email</th>
+             </tr>
+         </thead>
+         <tbody>
+             
+         </tbody>
+     </table>
+     
+ </body>
+
+ <script>
+     
+
+    $('#search').keydown(function(){
+        $.getJSON("data.json", function(data){
+          var search = $('#search').val();
+          var regex = new RegExp(search, 'i');
+          var output;
+          $.each(data, function(key, val){
+          if((val.name.search(regex) != -1)){
+              output += "<tr>";
+                output += "<td id='"+key+"'>"+val.id+"</td>";
+                output += "<td id='"+key+"'>" + val.name +"</td>";
+                output += "<td id='"+key+"'>" + val.email +"</td>";
+              output += "</tr>";
+          }
+          });
+
+          $('tbody').html(output);
+        });
+    })
+ </script>
+
+</html>
+
+ 
